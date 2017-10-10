@@ -1,0 +1,100 @@
+html {
+    font-family: verdana, arial, sans;
+}
+
+.cool_text {
+    color: #EEE;
+    text-shadow: 1px 1px 4px #000; 
+}
+
+.scoreboard {
+    float: right;
+}
+
+.timeboard {
+    float: left;
+}
+
+#explaination {
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+}
+
+.shrinkRotateHueRotate {
+    animation: hue-rotate 1s linear infinite,
+               shrinkRotateFrames 1s cubic-bezier(1, -0.43, 0, 0.99) infinite;
+}
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+.rotateHueRotate {
+    animation: hue-rotate 1s linear infinite;
+}
+
+.shrinkRotateHueRotateInvert {
+    animation: hueRotateinvertFrames 1s linear infinite,
+               shrinkRotateFrames 1s cubic-bezier(1, -0.43, 0, 0.99) infinite;
+}
+@keyframes hueRotateinvertFrames {
+  from {
+    -webkit-filter: invert(0) hue-rotate(0);
+    -moz-filter: invert(0) hue-rotate(0);
+    -ms-filter: invert(0) hue-rotate(0);
+    filter: invert(0) hue-rotate(0);
+  }
+  50% {
+    -webkit-filter: invert(100%) hue-rotate(180deg);
+    -moz-filter: invert(100%) hue-rotate(180deg);
+    -ms-filter: invert(100%) hue-rotate(180deg);
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  to {
+    -webkit-filter: invert(0) hue-rotate(360deg);
+    -moz-filter: invert(0) hue-rotate(360deg);
+    -ms-filter: invert(0) hue-rotate(360deg);
+    filter: invert(0) hue-rotate(360deg);
+  }
+}
+
+.shrink {
+    animation: shrinkFrames 1s cubic-bezier(1, -0.43, 0, 0.99) infinite;
+}
+@keyframes shrinkFrames {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.shrinkRotate {
+    animation: shrinkRotateFrames 1s cubic-bezier(1, -0.43, 0, 0.99) infinite;
+}
+@keyframes shrinkRotateFrames {
+  from {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(.4) rotateZ(540deg);
+  }
+  to {
+    transform: scale(1) rotateZ(0);
+  }
+}
