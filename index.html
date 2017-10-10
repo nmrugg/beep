@@ -381,6 +381,7 @@
         /// LEVEL 10 (rotate)
         if (level == 10) {
             allowed_time = 56;
+            /// 2 are subtracted later too
             needed_beeps = 3;
             setTimeout(function ()
             {
@@ -420,6 +421,7 @@
             nose_y  = small_nose_y;
             nose_y2 = small_nose_y2;
             
+            /// 2 are subtracted later too
             needed_beeps = 3;
             
             x_vel = Math.abs(x_vel) - 10;
@@ -437,11 +439,47 @@
             }, 4000);
         }
         
-        /// LEVEL 25 (rotate hue only)
-        if (level == 25) {
+        /// LEVEL 23 (hue rotate)
+        if (level == 23) {
             setTimeout(function ()
             {
                 faceObj.classList.add("rotateHueRotate");
+            }, 4000);
+        }
+        
+        /// LEVEL 25 (shrink)
+        if (level == 25) {
+            setTimeout(function ()
+            {
+                faceObj.classList.remove("rotateHueRotate");
+                faceObj.classList.add("shrink");
+            }, 4000);
+        }
+        
+        /// LEVEL 28 (rotate)
+        if (level == 28) {
+            setTimeout(function ()
+            {
+                faceObj.classList.remove("shrink");
+                faceObj.classList.add("shrinkRotate");
+            }, 4000);
+        }
+        
+        /// LEVEL 30 (hue rotate)
+        if (level == 30) {
+            setTimeout(function ()
+            {
+                faceObj.classList.remove("shrinkRotate");
+                faceObj.classList.add("shrinkRotateHueRotate");
+            }, 4000);
+        }
+        
+        /// LEVEL 35 (invert)
+        if (level == 35) {
+            setTimeout(function ()
+            {
+                faceObj.classList.remove("shrinkRotateHueRotate");
+                faceObj.classList.add("shrinkRotateHueRotateInvert");
             }, 4000);
         }
         
