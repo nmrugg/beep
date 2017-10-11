@@ -595,6 +595,8 @@
         reset_match();
         in_play = true;
         faceObj.onclick = face_clicked;
+        faceObj.onmousedown = face_clicked;
+        faceObj.ontouchstart = face_clicked;
         
         face_reset();
         
